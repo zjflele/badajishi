@@ -63,7 +63,8 @@
 
 		default:
 
-			WeChat::run($PW['wechat_token']);
+            $openid=Wechat::getOpenID();
+			//WeChat::run($PW['wechat_token']);
 			//echo $_GET['openid'];
 
 			break;
