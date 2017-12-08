@@ -47,6 +47,40 @@
             {$userid}
         </section>
     </section>
+    <form action="" method="post" name="mysubmitform" id="mysubmitform" enctype="multipart/form-data">
+        <div class="result-content">
+            <table width="100%" class="insert-tab">
+                <tbody>
+                <tr class="formtr">
+                    <th class="formth" width="20%"><i class="require-red">*</i>性别：</th>
+                    <td class="formtd"><input type="text" value="{$PW['sex']}" size="32" name="info[sex]" class="common-text"></td>
+                </tr>
+                <tr class="formtr">
+                    <th class="formth"><i class="require-red">*</i>年龄：</th>
+                    <td class="formtd"><input type="text" value="{$PW['age']}" size="65" name="info[age]" class="common-text"></td>
+                </tr>
+                <tr class="formtr">
+                    <th class="formth"><i class="require-red">*</i>身高：</th>
+                    <td class="formtd"><input type="text" value="{$PW['height']}" size="32" name="info[height]" class="common-text"></td>
+                </tr>
+                <tr class="formtr">
+                    <th class="formth"><i class="require-red">*</i>体重：</th>
+                    <td class="formtd"><input type="text" value="{$PW['weighing']}" size="65" name="info[weighing]" class="common-text"></td>
+                </tr>
+                <tr class="formtr">
+                    <th class="formth"><i class="require-red">*</i>腰围：</th>
+                    <td class="formtd"><input type="text" value="{$PW['waist']}" size="65" name="info[waist]" class="common-text"></td>
+                </tr>
+                <tr class="formtr">
+                    <th class="formth"></th>
+                    <td class="formtd">
+                        <input type="button" onClick="doSubmit('mysubmitform','')" value="提 交" class="submit-button">
+                        <input type="button" value="返 回" onClick="history.go(-1)" class="reset-button">
+                    </td>
+                </tr>
+                </tbody></table>
+        </div>
+    </form>
     <div class="rich_media_clicks">&nbsp;</div>
 </article>
 </body>

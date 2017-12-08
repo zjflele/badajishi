@@ -68,7 +68,11 @@
             //$openid=Wechat::getOpenID();
             $userid = Member::createRandAccount();
 			//WeChat::run($PW['wechat_token']);
-			//echo $_GET['openid'];
+            if(isset($dosubmit))
+            {
+                Member::memUpdate($userid,$info);
+                operation_tips('提前成功！');
+            }
 
 			break;
 
