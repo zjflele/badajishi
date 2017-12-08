@@ -4,6 +4,8 @@
 
 	use Wechat\Wechat;
 
+    use phpWeChat\Member;
+
 	
 
 	!defined('IN_APP') && exit('Access Denied!');
@@ -63,7 +65,8 @@
 
 		default:
 
-            $openid=Wechat::getOpenID();
+            //$openid=Wechat::getOpenID();
+            $userid = Member::createRandAccount();
 			//WeChat::run($PW['wechat_token']);
 			//echo $_GET['openid'];
 
