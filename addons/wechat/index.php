@@ -68,11 +68,56 @@
             //$openid=Wechat::getOpenID();
             $userid = Member::createRandAccount();
 			//WeChat::run($PW['wechat_token']);
-            if(isset($dosubmit))
+            set_cookie('redirect',$redirect);
+
+            if(isset($dosubmit) && $dosubmit)
             {
-                Member::memUpdate($userid,$info);
-                operation_tips('提前成功！');
+
+                $info=array();
+                $info['sex']=trim($sex);
+                $info['age']=intval($age);
+                $info['height']=trim($height);
+                $info['weight']=trim($weight);
+                $info['waist']=trim($waist);
+
+                if(!trim($info['sex']))
+                {
+                    exit('sex');
+                }
+
+
+                if(!intval($info['age']))
+                {
+                    exit('age');
+                }
+
+                if(!trim($info['height']))
+                {
+                    exit('height');
+                }
+
+                if(!trim($info['weight']))
+                {
+                    exit('weight');
+                }
+                if(!trim($info['waist']))
+                {
+                    exit('waist');
+                }
+
+                $_userid = Member::memUpdate($userid,$info);
+
+                if($_userid>0)
+                {
+
+                    exit('success');
+                }
+                else
+                {
+                    exit($_userid);
+                }
             }
+
 
 			break;
 
