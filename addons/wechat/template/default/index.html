@@ -118,25 +118,23 @@
 <form action="{U(MOD,'index')}" name="registerform" id="registerform" target="target" method="post">
 
     <input type="hidden" name="dosubmit" value="1">
-
     <input type="hidden" name="redirect" value="{$redirect}">
     <input type="hidden" name="userid" value="{$userid}">
 
     <div class="r_m">
 
-        <input class="inp r_inp" type="text" name="sex" id="sex" msg="性别不能为空" placeholder="请输入性别">
-        <input class="inp r_inp" type="text" name="age" id="age" msg="年龄不能为空" placeholder="请输入年龄">
-        <input class="inp r_inp" type="text" name="height" id="height" msg="身高不能为空" placeholder="请输入身高">
-        <input class="inp r_inp" type="text" name="weight" id="weight" msg="体重不能为空" placeholder="请输入体重">
-        <input class="inp r_inp" type="text" name="waist" id="waist" msg="腰围不能为空" placeholder="请输入腰围">
-
+        <input class="inp r_inp" type="text" name="sex" id="sex" msg="性别不能为空" placeholder="请输入性别" value="{$memberInfo['sex']}">
+        <input class="inp r_inp" type="text" name="age" id="age" msg="年龄不能为空" placeholder="请输入年龄" value="{$memberInfo['age']}">
+        <input class="inp r_inp" type="text" name="height" id="height" msg="身高不能为空" placeholder="请输入身高" value="{$memberInfo['height']}">
+        <input class="inp r_inp" type="text" name="weight" id="weight" msg="体重不能为空" placeholder="请输入体重" value="{$memberInfo['weight']}">
+        <input class="inp r_inp" type="text" name="waist" id="waist" msg="腰围不能为空" placeholder="请输入腰围" value="{$memberInfo['waist']}">
 
     </div>
 
 
     <div class="jy_ann">
 
-        <input class="sub dj_z" type="button" id="dosubmit" value="提交">
+        <input class="sub dj_z" type="button" id="dosubmit" value="提交个人信息">
 
     </div>
 

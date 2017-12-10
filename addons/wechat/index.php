@@ -118,6 +118,8 @@
                 }
             }
 
+            $memberInfo = Member::getUserByUserId($userid);
+
 
 			break;
 
